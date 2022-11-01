@@ -14,16 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::post('/submit', [ContactController::class, 'submit']);
+
 Route::get('/', [ContactController::class, 'contact']);
 
-
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

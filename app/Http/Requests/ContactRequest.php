@@ -32,9 +32,6 @@ class ContactRequest extends FormRequest
 
     public function messages()
     {
-        return array_merge(parent::messages(),[
-
-            'email.min' => 'There must be at least five characters in your email'
-            ]);
+        return ['email.min' => 'There must be at least five characters in your email'];
     }
 }
